@@ -1,6 +1,7 @@
 # ChemString
 
 [![CI](https://github.com/Mirch/chemstring/actions/workflows/ci.yml/badge.svg)](https://github.com/Mirch/chemstring/actions/workflows/ci.yml)
+[![crates](https://img.shields.io/crates/v/chemstring)](https://crates.io/crates/chemstring)
 
  **ChemString** provides a parser that allows you to convert a string to its representation(s) using chemical symbols.
  ## Examples
