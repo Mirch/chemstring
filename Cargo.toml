@@ -1,7 +1,12 @@
 [package]
 name = "chemstring"
 version = "0.1.0"
+authors = ["Mircea Teodor Oprea <mircea@mirceaoprea.net>"]
+license = "MIT"
+repository = "https://github.com/Mirch/chemstring"
 edition = "2021"
+rust-version = "1.75"
+description = "A parser that converts strings to their representation using chemical element notations."
 
 [lib]
 name = "chemstring"
