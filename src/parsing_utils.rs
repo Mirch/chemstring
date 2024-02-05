@@ -1,6 +1,6 @@
-use crate::elements::ELEMENTS;
+use crate::symbols::SYMBOLS;
 
-/// A parsing utility function that takes in a string and returns all the chemical element permutations
+/// A parsing utility function that takes in a string and returns all the chemical symbols permutations
 /// that can be formed from the string. The function is case-insensitive and will return an empty vector
 /// if the input string is empty.
 pub(crate) fn parse_string(value: String) -> Vec<String> {
@@ -12,7 +12,7 @@ pub(crate) fn parse_string(value: String) -> Vec<String> {
     let mut result: Vec<String> = vec![];
 
     let start = tokens[0].to_uppercase().to_string();
-    if ELEMENTS.contains(&start.as_str()) {
+    if SYMBOLS.contains(&start.as_str()) {
         let remaining_possibilities = parse_string(tokens[1..].iter().collect());
         let possibilities = process_possibilities(start.clone(), remaining_possibilities);
         result.extend(possibilities);
@@ -20,7 +20,7 @@ pub(crate) fn parse_string(value: String) -> Vec<String> {
 
     if value.len() >= 2 {
         let start = format!("{}{}", tokens[0].to_uppercase(), tokens[1]);
-        if ELEMENTS.contains(&start.as_str()) {
+        if SYMBOLS.contains(&start.as_str()) {
             let remaining_possibilities = parse_string(tokens[2..].iter().collect());
             let possibilities = process_possibilities(start, remaining_possibilities);
             result.extend(possibilities);

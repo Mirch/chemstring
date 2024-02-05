@@ -1,5 +1,5 @@
-/// The notation for all the (known?) chemical elements.
-pub(crate) const ELEMENTS: [&str; 118] = [
+/// The notation for all the (known?) chemical symbols.
+pub(crate) const SYMBOLS: [&str; 118] = [
     "H", "He", "Li", "Be", "B", "C", "N", "O", "F", "Ne", "Na", "Mg", "Al", "Si", "P", "S", "Cl",
     "Ar", "K", "Ca", "Sc", "Ti", "V", "Cr", "Mn", "Fe", "Co", "Ni", "Cu", "Zn", "Ga", "Ge", "As",
     "Se", "Br", "Kr", "Rb", "Sr", "Y", "Zr", "Nb", "Mo", "Tc", "Ru", "Rh", "Pd", "Ag", "Cd", "In",

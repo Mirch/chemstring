@@ -1,4 +1,4 @@
-//! A library for parsing strings into chemical element permutations.
+//! A library for parsing strings into chemical symbols permutations.
 //! <br>
 //!
 //! # Example
@@ -10,16 +10,16 @@
 //!
 //! ````
 
-pub mod elements;
 pub mod errors;
 pub mod parsing_utils;
+pub mod symbols;
 
 use errors::ChemStringErrors;
 use parsing_utils::parse_string;
 
-/// A `ChemString` is a string that can be written using only chemical element notations.
+/// A `ChemString` is a string that can be written using only chemical symbols.
 /// The `ChemString` struct has a single field, `0`, which is a vector of all the possible
-/// chemical element permutations that can be formed from the string.
+/// chemical symbols permutations that can be formed from the string.
 pub struct ChemString(Vec<String>);
 
 impl ChemString {
@@ -42,13 +42,13 @@ impl ChemString {
         Ok(ChemString(result))
     }
 
-    /// Returns a vector of all the possible chemical element permutations that can be formed
+    /// Returns a vector of all the possible chemical symbols permutations that can be formed
     /// from the string.
     pub fn results(&self) -> Vec<String> {
         self.0.clone()
     }
 
-    /// Returns the number of possible chemical element permutations that can be formed from the string.
+    /// Returns the number of possible chemical symbols permutations that can be formed from the string.
     pub fn count(&self) -> usize {
         self.0.len()
     }
