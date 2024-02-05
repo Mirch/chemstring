@@ -8,6 +8,10 @@
 //! let chem_string = ChemString::parse("seal").unwrap();
 //! assert_eq!(chem_string.results(), vec!["Se Al"]);
 //!
+//! let chem_string = ChemString::parse("bichon").unwrap();
+//! let possible_permutation = "Bi C H O N".to_string();
+//! assert!(chem_string.results().contains(&possible_permutation));
+//!
 //! ````
 
 pub mod errors;
